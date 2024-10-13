@@ -12,7 +12,7 @@ let isModer = false;
 
 const users = localStorage.users ? JSON.parse(localStorage.users) : [];
 getusers();
-const tds = document.querySelectorAll('td');
+let tds = document.querySelectorAll('td');
 
 sign_up.addEventListener('submit', (e) =>{
   e.preventDefault();
@@ -28,7 +28,8 @@ sign_up.addEventListener('submit', (e) =>{
   users.push(user);
   localStorage.users = JSON.stringify(users);
   getusers();
-
+  
+  tds = document.querySelectorAll('td');
   sign_up.style.display = 'none';
   sign_in.style.display = 'flex';
 });
@@ -40,7 +41,7 @@ log_in.addEventListener('click', () =>{
 
 sign_in.addEventListener('submit', (e) =>{
   e.preventDefault();
-
+  
   const user = {
     role: e.target.elements.moderator_viewer.value,
     password: e.target.elements.moderator_password.value
