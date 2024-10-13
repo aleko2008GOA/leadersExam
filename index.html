@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel = 'stylesheet' href = "style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <nav>
+      <button id = 'sign_in_button'>Sign in</button>
+      <button id = 'sign_up_button'>Sign up</button>
+    </nav>
+    <form id = "sign_up">
+      <h1>Welcome chad!</h1>
+      <span>
+        <label for = 'name'>Your name</label>
+        <input type = 'text' name = 'name' id = 'name' placeholder="Jhone" required>
+      </span>
+      <span>
+        <label for = 'email'>Your email</label>
+        <input type = 'email' name = 'email' id = 'email' placeholder="example@gmail.com" required>
+      </span>
+      <span>
+        <label for = 'age'>Your age</label>
+        <input type = "date" id = 'age' name = 'age' required>
+      </span>
+      <span>
+        <label for = 'par_name'>Parent name</label>
+        <input type = 'text' name = 'par_name' id = 'par_name' placeholder = 'Mum/Dad' required>
+      </span>
+      <span>
+        <label for = 'fb'>Your facebook</label>
+        <input type = "url" name = 'fb' id = 'fb' placeholder="fb.com" required>
+      </span>
+      <span>
+        <label for = 'par_fb'>Parent facebook</label>
+        <input type = 'url' name = 'par_fb' id = 'par_fb' placeholder="par/fb.com" required>
+      </span>
+      <span>
+        <input type = "submit" value = "I want to be a chad!">
+        <input type = "reset" value = "Not strong enough">
+      </span>
+      <p>Already have an account? <button style = "border:none; background-color:transparent; font-weight:bold" id = "log_in">log in</button></p>
+    </form>
+
+    <form id = "sign_in">
+      <h1>Welcome back chad!</h1>
+      <select name = "moderator_viewer">
+        <option value = 'viewer'>Viewer</option>
+        <option value = 'moderator'>Moderator</option>
+      </select>
+      <span>
+        <label for = 'moderator_password'>Password</label>
+        <input type = 'password' placeholder="Only if you are moderator" name = "moderator_password" id = 'moderator_password'>
+      </span>
+      <span>
+        <input type = 'submit' value = "viue all chads">
+        <input type = 'button' value = "back" id = 'back'>
+      </span>
+      <p style = 'font-size: 8px;'>password: GOATheBest</p>
+    </form>
+
+    <div id = 'tableContainer'>
+      <table id = "all_users">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Parent name</th>
+          <th>Facebook link</th>
+          <th>Parent facebook link</th>
+        </tr>
+      </table>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
