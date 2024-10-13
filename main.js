@@ -64,6 +64,7 @@ sign_in.addEventListener('submit', (e) =>{
   else if(user.role === 'viewer'){
     sign_in.style.display = 'none';
     all_users.style.display = 'flex';
+    isModer = 'false';
   }
 });
 
